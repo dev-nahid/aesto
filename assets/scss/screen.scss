@@ -1,0 +1,342 @@
+/*
+
+This is a development CSS file which is compiled to a minified
+production stylesheet in assets/built/screen.css using: gulp dev
+
+*/
+
+/* Lib - Local component imports
+/* ---------------------------------------------------------- */
+
+/* Base components */
+@import "vars.scss";
+@import "components/global.scss";
+@import "components/forms.scss";
+@import "components/buttons.scss";
+@import "components/popular_tags.scss";
+@import "components/search.scss";
+@import "components/card.scss";
+@import "components/zoom.scss";
+
+/* Ghost components */
+@import "layouts/header.scss";
+@import "layouts/content.scss";
+@import "layouts/readmore.scss";
+@import "layouts/members.scss";
+@import "layouts/errors.scss";
+@import "layouts/footer.scss";
+@import "layouts/badge.scss";
+@import "layouts/grid.scss";
+
+/* Main - Your styles here! Edit below
+/* ---------------------------------------------------------- */
+
+html,
+.it-viewport {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--color-bg-white);
+}
+
+.it-main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.it-page {
+  padding: 0 4vw;
+}
+
+.it-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.it-head-actions a {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 1.5vw 0 0;
+  padding: 10px 0;
+}
+
+.it-head-actions a:last-child {
+  margin: 0;
+}
+
+.it-head-actions a svg {
+  height: 1.8rem;
+  fill: currentcolor;
+}
+
+.it-head-actions a:first-child svg {
+  margin-left: 20px;
+}
+
+.it-head-actions a:last-child svg {
+  height: 2rem;
+}
+.lazy {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.lazy.loaded {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Index
+/* ---------------------------------------------------------- */
+
+.it-pagination {
+  text-align: center;
+  margin-bottom: 8vmin;
+}
+.it-postfeed {
+  margin-bottom: 8vmin;
+}
+
+/* Page
+/* ---------------------------------------------------------- */
+.page {
+  margin-bottom: 8vmin;
+}
+
+.it-page-head {
+  margin: 0 auto;
+  padding: 0 0 2vmin;
+}
+.it-page-head > h1 {
+  margin-top: 4vmin;
+}
+.page .it-title,
+.tag-template .it-title {
+  margin-top: 2rem;
+}
+
+.it-page-image {
+  margin: 4vmin 0 0 0;
+}
+
+.it-page-head > p {
+  max-width: 700px;
+  font-size: 3rem;
+  line-height: 1.2;
+  opacity: 0.78;
+  margin-top: 1vmin;
+}
+
+@media (max-width: 700px) {
+  .it-page-head > p {
+    font-size: 1.6rem;
+  }
+}
+
+/* Post
+/* ---------------------------------------------------------- */
+
+.it-header {
+  padding: 0 0 4vmin 0;
+}
+
+.it-post-meta {
+  display: block;
+  margin: 3rem 0 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  text-transform: unset;
+  opacity: 1;
+}
+.it-pipe {
+  opacity: 0.5;
+  margin: 0 0.2rem;
+}
+.it-title {
+  line-height: 1.5;
+}
+
+.it-excerpt {
+  margin: 1rem 0 0;
+  text-align: left;
+  font-size: 2.5rem !important;
+  line-height: 1.2 !important;
+  opacity: 0.78;
+}
+.it-feature-image-wrapper {
+  grid-column: wide-start/wide-end;
+  height: 490px;
+  border-radius: 7px;
+  overflow: hidden;
+  position: relative;
+  background: var(--color-bg);
+  width: 100%;
+}
+
+.it-feature-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.it-post-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 8vmin 0;
+}
+
+.it-post-tags {
+  display: flex;
+}
+.it-post-tags > a {
+  background: var(--color-bg);
+  display: inline-block;
+  margin-right: 0.8rem;
+  padding: 0.7rem 1.3rem;
+  font-weight: 500;
+}
+
+.it-social-share {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.it-social-share > a {
+  background: var(--color-bg);
+  padding: 0.5rem 1.3rem;
+  margin-left: 0.8rem;
+}
+
+.it-social-share > a > svg {
+  width: 1.8rem;
+  opacity: 0.7;
+  margin-top: 0.3rem;
+}
+
+.it-post-footer {
+  margin: 2rem 0;
+}
+
+.it-post-comments {
+  margin: 0 0 8vmin;
+  background: var(--color-bg);
+  padding: 4rem;
+  border-radius: 7px;
+  border: 1px solid var(--color-border);
+}
+
+/* Author Archive
+/* ---------------------------------------------------------- */
+
+.it-author-image {
+  height: 100px;
+  width: 100px;
+  margin: 2rem 0;
+  border-radius: 50%;
+  overflow: hidden;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background: #fff;
+  // border: 1px solid #f7f7f7;
+  // padding: .5rem;
+  position: relative;
+  box-shadow: 5px 5px 6px -1px #999999c9;
+}
+.it-author-image.no-cover {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+.it-author-meta {
+  margin: 2vmin 0 0 0;
+  font-size: 1.2em;
+}
+
+.it-author-links {
+  display: flex;
+}
+
+.it-author-links a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.75rem;
+  background: var(--color-bg);
+  height: 40px;
+  padding: 0 1.5rem;
+  color: currentColor;
+  text-decoration: none;
+  font-weight: 500;
+}
+.it-author-links svg {
+  width: 18px;
+}
+
+@media (max-width: 700px) {
+  .it-author-meta {
+    font-size: 1.6rem;
+  }
+}
+
+/* Tags Page
+/* ---------------------------------------------------------- */
+
+.it-tags {
+  margin: 2vmin 0 8vmin;
+}
+
+.it-tags-item {
+  background: var(--color-bg);
+  padding: 5vmin;
+  font-size: 2rem;
+  border-radius: 7px;
+  border: 1px solid var(--color-border);
+}
+
+.it-tags-title {
+  font-size: 2rem;
+}
+
+.it-tags-item span {
+  font-size: 1.8rem;
+  opacity: 0.7;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* Authors Page
+/* ---------------------------------------------------------- */
+
+.it-authors {
+  margin: 2vmin 0 8vmin;
+}
+.it-authors-item {
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4vmin;
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+}
+.it-avatar-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.it-authors-item h2 {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+.it-authors-item p {
+  flex-grow: 1;
+  margin-bottom: 2rem;
+}

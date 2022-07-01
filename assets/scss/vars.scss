@@ -1,0 +1,42 @@
+/* Variables
+/* ---------------------------------------------------------- */
+
+:root {
+
+    /* Colours */
+    --color-primary: #c32b48;
+    --color-success: #084c16;
+    --color-danger: #c31717;
+    --color-base: #3c4257;
+    --color-border: #e1edf4;
+    --color-bg: #f6f9fe;
+    --color-bg-white: #fff;
+
+    /* Fonts */
+    --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --font-serif: Georgia, Times, serif;
+    --font-mono: Menlo, Courier, monospace;
+    --font-light: 100;
+    --font-normal: 400;
+    --font-bold: 700;
+    --font-heavy: 800;
+
+    /* Breakpoints */
+    --xlarge: 1680px;
+    --large: 1280px;
+    --medium: 980px;
+    --small: 740px;
+    --xsmall: 480px;
+
+    /* Sizes */
+    --height: 4rem;
+    --margin: 2rem;
+    --radius: 0.5rem;
+}
+
+html[data-theme="dark"] {
+      --color-base: #ffffff5c;
+      --color-bg: #171a1e;
+      --color-bg-white: #13161a;
+      --color-border: #333;
+    }
